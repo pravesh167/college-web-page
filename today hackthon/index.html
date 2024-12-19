@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aims college - Official Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1> Aims college </h1>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Welcome to  Aims College </h2>
+        <p>Your future starts here. Join us today!</p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p> Aims College is one of the leading institutions, offering top-notch education with modern amenities. Our goal is to nurture the leaders of tomorrow.</p>
+        <p>We offer a variety of programs, including undergraduate, postgraduate, and research opportunities. Join us to kick-start your career!</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Campus Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="https://aimsbrt.edu.np/frontend/images/blog_1.jpg" alt="C"></div>
+            <div class="gallery-item"><img src="https://aimsbrt.edu.np/frontend/images/about_02.jpg" alt="Campus 3"></div>
+            <div class="gallery-item"><img src="https://www.thebritishcollege.edu.np/uploads/medias/DSC00122.jpg" alt="Campus 4"></div>
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="form-message"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 College Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

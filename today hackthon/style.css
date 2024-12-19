@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #2a3d66;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+.hero {
+    background: url('https://lh3.googleusercontent.com/p/AF1QipP4jpplE0AGmhNjvna9vfA3-pgpI-AAcyIyRl4=s1360-w1360-h1020') no-repeat center center/cover;
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3em;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #e07b00;
+}
+
+.about, .gallery, .contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about h2, .gallery h2, .contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    width: 100;
+
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact button {
+    background-color: #2a3d66;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #1f2b42;
+}
+
+footer {
+    background-color: #2a3d66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}
