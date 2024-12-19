@@ -2,31 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 nav {
-    background-color: #2a3d66;
-    color: white;
+    background-color: #8f5bd4;
+
+    color: rgb(235, 232, 232);
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav .logo h1 {
-    font-size: 1.8em;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 nav ul li {
@@ -35,69 +42,138 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 1.1em;
+    color: rgb(250, 248, 248);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffa500;
+    color: #1af12c;
 }
 
+/* Hero Section */
 .hero {
-    background: url('https://lh3.googleusercontent.com/p/AF1QipP4jpplE0AGmhNjvna9vfA3-pgpI-AAcyIyRl4=s1360-w1360-h1020') no-repeat center center/cover;
+    background: url(https://img.freepik.com/premium-photo/large-brick-building-with-tower-that-says-university-america_551880-7776.jpg?semt=ais_hybrid) no-repeat center center/cover;
     text-align: center;
-    padding: 80px 20px;
-    color: white;
+    padding: 100px 20px;
+    color: rgb(238, 240, 244);
+    position: relative;
+    z-index: 1;
 }
 
 .hero h2 {
     font-size: 3em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .hero button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #ffa500;
     color: white;
     border: none;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .hero button:hover {
     background-color: #e07b00;
 }
 
-.about, .gallery, .contact {
-    padding: 40px 20px;
+/* About Section */
+.about {
+    padding: 60px 20px;
     text-align: center;
+    background-color: #f7eeee;
+    margin-bottom: 40px;
 }
 
-.about h2, .gallery h2, .contact h2 {
-    font-size: 2.5em;
+.about h2 {
+    font-size: 2.8em;
     margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7eeee;
+}
+
+.gallery h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
 }
 
 .gallery-container {
     display: flex;
-    width: 100;
-
     gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery-item {
+    background-color: rgb(229, 205, 247);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.gallery-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7eeee;
+}
+
+.contact h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
 }
 
 .contact form {
@@ -105,48 +181,99 @@ nav ul li a:hover {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-
-.contact .form-group {
-    display: flex;
-    flex-direction: column;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact label {
-    font-size: 1.1em;
-    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #333;
 }
 
-.contact input, .contact textarea {
-    padding: 10px;
+.contact input,
+.contact textarea {
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.1em;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #ffa500;
 }
 
 .contact button {
+    padding: 5px;
     background-color: #2a3d66;
     color: white;
-    padding: 15px;
     border: none;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     cursor: pointer;
+    width: 80px;
+   justify-content: center;
+    align-items: center;
+   
+    transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #1f2b42;
+    background-color: #d41232;
 }
 
+.contact #form-message {
+    margin-top: 10px;
+    justify-content: center; 
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Footer */
 footer {
-    background-color: #2a3d66;
+    background-color:  #8f5bd4;
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 10px;
+    margin-top: 30px;
 }
 
 footer p {
-    font-size: 1em;
+    font-size: 1.1em;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .about p,
+    .gallery-item p {
+        font-size: 1em;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+}
+.h3
+{
+    color: #6310d1;
+} 
